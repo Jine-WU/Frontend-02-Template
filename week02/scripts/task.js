@@ -26,61 +26,61 @@ function UTF8_Encoding(str) {
 
 UTF8_Encoding('字符串转字节')
 
-// console.log('第8小课：Object练习\n用 JavaScript 去设计狗咬人的代码。')
-//
-// class Dog {
-//     constructor(name) {
-//         this.name = name
-//     }
-// }
-//
-// class Human {
-//     constructor(name) {
-//         this.name = name
-//         this.healthValue = 100 // 默认生命值为100
-//         this.recordList = []
-//     }
-//
-//     hurt(damage) {
-//         let deHealthValue = 0
-//         switch (damage.hurtValue) {
-//             case 30:
-//                 deHealthValue = 10
-//                 break
-//             case 60:
-//                 deHealthValue = 20
-//                 break
-//             case 90:
-//                 deHealthValue = 30
-//                 break
-//             default: break
-//         }
-//         this.healthValue -= deHealthValue
-//         this.recordList.push(
-//             {
-//                 origin: `被${damage.name}咬了`,
-//                 hurtValue: damage.hurtValue,
-//                 remark: `损失${deHealthValue}生命值`
-//             }
-//         )
-//     }
-// }
-//
-// const dog = new Dog('旺财')
-//
-// const human = new Human('小明')
-//
-// console.log('狗的名字: ', dog.name)
-//
-// console.log(`小明的信息\n 名字：${human.name}\n 生命值：${human.healthValue}\n 记录：${JSON.stringify(human.recordList)}`)
-//
-// console.log(`${human.name}被${dog.name}咬了！！！`)
-//
-// human.hurt({
-//     name: dog.name,
-//     hurtValue: 30
-// })
-//
-// console.log(`小明的信息\n 名字：${human.name}\n 生命值：${human.healthValue}\n 记录：${JSON.stringify(human.recordList)}`)
+console.log('第8小课：Object练习\n用 JavaScript 去设计狗咬人的代码。')
+
+class Dog {
+    constructor(name) {
+        this.name = name
+    }
+}
+
+class Human {
+    constructor(name) {
+        this.name = name
+        this.healthValue = 100 // 默认生命值为100
+        this.recordList = []
+    }
+
+    hurt(damage) {
+        let deHealthValue = 0
+        switch (damage.hurtValue) {
+            case 30:
+                deHealthValue = 10
+                break
+            case 60:
+                deHealthValue = 20
+                break
+            case 90:
+                deHealthValue = 30
+                break
+            default: break
+        }
+        this.healthValue -= deHealthValue
+        this.recordList.push(
+            {
+                origin: `被${damage.name}咬了`,
+                hurtValue: damage.hurtValue,
+                remark: `损失${deHealthValue}生命值`
+            }
+        )
+    }
+}
+
+const dog = new Dog('旺财')
+
+const human = new Human('小明')
+
+console.log('狗的名字: ', dog.name)
+
+console.log(`小明的信息\n 名字：${human.name}\n 生命值：${human.healthValue}\n 记录：${JSON.stringify(human.recordList)}`)
+
+console.log(`${human.name}被${dog.name}咬了！！！`)
+
+human.hurt({
+    name: dog.name,
+    hurtValue: 30
+})
+
+console.log(`小明的信息\n 名字：${human.name}\n 生命值：${human.healthValue}\n 记录：${JSON.stringify(human.recordList)}`)
 
 console.log('==========第二周作业 end==========')
