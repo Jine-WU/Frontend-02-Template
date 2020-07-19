@@ -1,0 +1,9 @@
+{
+  "name": "week03",
+  "version": "1.0.0",
+  "scripts": {
+    "week": "node ./scripts/task.js"
+  },
+  "dependencies": {
+  }
+}
