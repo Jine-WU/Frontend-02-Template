@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tutorial Demo</title>
+</head>
+<body>
+<!-- 引入 G6 -->
+
+<div id="mountNode"></div>
+
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.5.10/dist/g6.min.js"></script>
+
+<script>
+    console.log(G6.Global.version);
+
+    const data = {
+        id: 'root',
+        label: 'root',
+        children: [
+            {
+                id: 'subTree1',
+                type: 'subTree1'
+            },
+            {
+                id: 'subTree2',
+                type: 'subTree2'
+            }
+        ]
+    };
+
+    const treeGraph = new G6.Graph({
+        container: 'mountNode', // 指定挂载容器
+        width: 800,
+        height: 600,
+        modes: {
+            default: [
+                {
+                    type: 'collapse-expand',
+                    onChange(item, collapsed) {
+                        const icon = item.get('group').findByClassName('collapse-icon');
+                        if (collapsed) {
+                            icon.attr('symbol', EXPAND_ICON);
+                        } else {
+                            icon.attr('symbol', COLLAPSE_ICON);
+                        }
+                    },
+                },
+                'drag-canvas',
+                'zoom-canvas',
+            ],
+        },
+        layout: {
+            type: 'dendrogram',
+            direction: 'LR', // H / V / LR / RL / TB / BT
+            nodeSep: 50,
+            rankSep: 100,
+            radial: true,
+        },
+    })
+
+    // 加载数据
+    treeGraph.data(data)
+
+    // 渲染
+    treeGraph.render()
+
+</script>
+</body>
+</html>

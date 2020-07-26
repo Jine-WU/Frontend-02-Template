@@ -1,0 +1,11 @@
+{
+  "name": "week04",
+  "version": "1.0.0",
+  "scripts": {
+    "week": "node ./scripts/task.js",
+    "server": "node ./scripts/server.js",
+    "client": "node ./scripts/client.js"
+  },
+  "dependencies": {
+  }
+}
